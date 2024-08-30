@@ -1,0 +1,26 @@
+
+body{
+    margin: 0;
+    background-repeat: no-repeat;
+}
+
+.elements{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.line{
+    border: 0;
+    height: 1px;
+    width: 100%;
+    margin-top: 50px;
+    background-color: #000;
+}
+
+main{
+    width: 100%;
+    height: 100px;
+    background-color: gold;
+}
+
