@@ -1,7 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
 body{
     margin: 0;
+    padding: 0;
+    height: 100%;
     background-repeat: no-repeat;
+}
+
+.tracer{
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 20px;
+    margin-left: 50px;
+    height: 100%;
 }
 
 .elements{
@@ -14,13 +24,30 @@ body{
     border: 0;
     height: 1px;
     width: 100%;
-    margin-top: 50px;
+    /*margin-top: 50px;*/
+    padding-top: 0;
     background-color: #000;
 }
 
-main{
+.line2{
+    border: 0;
+    height: 1px;
     width: 100%;
-    height: 100px;
-    background-color: gold;
+    background-color: #000;
 }
 
+.container{
+    height: 790px;
+    width: 100%;
+    display: flex;
+    justify-content: center; /*alinha elementos na horizontal*/
+    align-items: center; /*alinha elementos na vertical*/
+}
+
+.conteudo{
+    width: 60%;
+    height: 600px;
+    border-radius: 20px;
+    background-color: aqua;
+    
+}
