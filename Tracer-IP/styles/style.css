@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+
+.tracer {
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 20px;
+    margin-left: 50px;
+    height: 100%;
+}
+
+.elements {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.line {
+    border: 0;
+    height: 1px;
+    width: 100%;
+    /*margin-top: 50px;*/
+    padding-top: 0;
+    background-color: #000;
+}
+
+.line2 {
+    border: 0;
+    height: 1px;
+    width: 100%;
+    background-color: #000;
+}
+
+.container {
+    height: 790px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /*alinha elementos na horizontal*/
+    align-items: center;
+    /*alinha elementos na vertical*/
+}
+
+.conteudo {
+    width: 40%;
+    height: 220px;
+    border-radius: 20px;
+    background-color: antiquewhite;
+
+}
+
+.text {
+    margin-left: 20px;
+}
+
+/* From Uiverse.io by liyaxu123 */
+.form-control {
+    position: relative;
+    margin: 20px 0 40px;
+    width: 190px;
+}
+
+.form-control input {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px #000 solid;
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+    color: #000;
+}
+
+.form-control input:focus,
+.form-control input:valid {
+    outline: 0;
+    border-bottom-color: lightblue;
+}
+
+.form-control label {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    pointer-events: none;
+}
+
+.form-control label span {
+    display: inline-block;
+    font-size: 18px;
+    min-width: 5px;
+    color: #000;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus+label span,
+.form-control input:valid+label span {
+    color: lightblue;
+    transform: translateY(-30px);
+}
+
+
+@media screen and (max-width: 610px) {
+    .conteudo {
+        overflow: hidden;
+        width: 60%;
+        height: 400px;
+    }
+}
