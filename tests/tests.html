@@ -1,43 +1,19 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quadrado Dinâmico</title>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-        }
-
-        .elements {
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-
-        .line {
-            border: 0;
-            height: 1px;
-            width: 100%;
-            background-color: #000;
-            margin-top: 50px;
-        }
-
-        .quadrado {
-            flex: 1; /* Ocupa todo o espaço disponível */
-            background-color: #4CAF50;
-            width: 100%;
-        }
-    </style>
+    <title>Formato de Input</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <div class="elements">
-        <hr class="line">
-        <div class="quadrado">
-            <!-- O quadrado preencherá todo o espaço disponível -->
-        </div>
+    <div class="container">
+        <label for="formatted-input">Digite o número:</label>
+        <input type="text" id="formatted-input" placeholder="Digite aqui" oninput="formatInput()">
     </div>
+    <script src="script.js"></script>
 </body>
+
 </html>
