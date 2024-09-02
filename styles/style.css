@@ -5,12 +5,13 @@ body {
     padding: 0;
     height: 100%;
     background-repeat: no-repeat;
+    font-family: "Roboto Condensed", sans-serif;
 }
 
 .tracer {
-    font-family: "Roboto Condensed", sans-serif;
     font-size: 20px;
-    margin-left: 50px;
+    margin-top: 20px;
+    margin-left: 30px;
     height: 100%;
 }
 
@@ -24,6 +25,7 @@ body {
     border: 0;
     height: 1px;
     width: 100%;
+    opacity: 20%;
     /*margin-top: 50px;*/
     padding-top: 0;
     background-color: #000;
@@ -31,13 +33,14 @@ body {
 
 .line2 {
     border: 0;
+    opacity: 20%;
     height: 1px;
     width: 100%;
     background-color: #000;
 }
 
 .container {
-    height: 790px;
+    height: 770px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -47,21 +50,32 @@ body {
 }
 
 .conteudo {
-    width: 40%;
+    max-width: 40%;
+    min-width: 420px;
     height: 220px;
     border-radius: 20px;
     background-color: antiquewhite;
-
 }
 
 .text {
     margin-left: 20px;
 }
 
+.text h1{
+    width: 80%;
+    font-size: 30px;
+}
+
+.inputs{
+    display: inline-flex;
+    flex-wrap: wrap;
+    
+}
+
 /* From Uiverse.io by liyaxu123 */
 .form-control {
     position: relative;
-    margin: 20px 0 40px;
+    margin: 30px 0 40px;
     width: 190px;
 }
 
@@ -74,12 +88,16 @@ body {
     padding: 15px 0;
     font-size: 18px;
     color: #000;
+    transition-property: border-bottom-color;
+    transition-duration: 700ms;
 }
 
 .form-control input:focus,
 .form-control input:valid {
+    text-decoration: none;
     outline: 0;
-    border-bottom-color: lightblue;
+    border-bottom-color: cornflowerblue;
+    
 }
 
 .form-control label {
@@ -99,15 +117,77 @@ body {
 
 .form-control input:focus+label span,
 .form-control input:valid+label span {
-    color: lightblue;
+    color: cornflowerblue;
     transform: translateY(-30px);
 }
 
-
-@media screen and (max-width: 610px) {
-    .conteudo {
-        overflow: hidden;
-        width: 60%;
-        height: 400px;
-    }
+/* From Uiverse.io by Cornerstone-04 */ 
+.box {
+    width: 140px;
+    height: auto;
+    float: left;
+    transition: .5s linear;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    padding: 15px;
+    text-align: center;
+    margin: 0 8px;
+    background: transparent;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+  
+  .box:before {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    width: 100%;
+    border-bottom: 4px solid transparent;
+    border-left: 4px solid transparent;
+    box-sizing: border-box;
+    transform: translateX(100%);
+}
+  
+  .box:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    border-top: 4px solid transparent;
+    border-right: 4px solid transparent;
+    box-sizing: border-box;
+    transform: translateX(-100%);
+}
+  
+  .box:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+  
+  .box:hover:before {
+    border-color: #262626;
+    height: 100%;
+    transform: translateX(0);
+    transition: .3s transform linear, .3s height linear .3s;
+}
+  
+  .box:hover:after {
+    border-color: #262626;
+    height: 100%;
+    transform: translateX(0);
+    transition: .3s transform linear, .3s height linear .5s;
+}
+  
+  button {
+    width: auto;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background: transparent;
 }

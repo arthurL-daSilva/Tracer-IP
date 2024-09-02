@@ -1,14 +1,23 @@
-function formatInput() {
-    const input = document.getElementById('formatted-input');
-    let value = input.value.replace(/\D/g, '');
+// Set endpoint and your access key
+const ip = '45.4.26.252';
+const accessKey = '5b7eb238-810e-4b9d-b14c-8421ca4f52d8';
+const url = 'https://apiip.net/api/check?ip='+ ip +'&accessKey='+ accessKey + '&output=json';
 
-    if (value.length > 4) {
-        value = value.replace(/(\d{2})(\d{2})(\d{2})(\d{1})/, '$1.$2.$3.$4');
-    } else if (value.length > 2) {
-        value = value.replace(/(\d{2})(\d{2})(\d{0,2})/, '$1.$2.$3');
-    } else if (value.length > 0) {
-        value = value.replace(/(\d{2})(\d{0,2})/, '$1.$2');
+async function getIpInfo (){
+    // Make a request and store the response
+    const response = await fetch(url)
+    
+    if(response.status == 200){
+        const obj = await response.json()
+        console.log(obj)
     }
-
-    input.value = value;
-}
+    else{
+      console.log("Request failed")
+    }
+    // Decode JSON response:
+    //const result = await response.json();
+  
+    // Output the "code" value inside "currency" object
+    //console.log(result.currency.code);
+  };
+  getIpInfo();
