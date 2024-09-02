@@ -19,7 +19,7 @@ function limitedInput(){
 
 async function getIpInfo (){
     // Set endpoint and your access key
-    const ip = '45.4.26.252';
+    const ip = 'YOUR_IP';
     const accessKey = '5b7eb238-810e-4b9d-b14c-8421ca4f52d8';
     const url = 'https://apiip.net/api/check?ip='+ ip +'&accessKey='+ accessKey; 
   
