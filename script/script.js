@@ -25,10 +25,9 @@ function InputButtonConteudo(){
     position.style.justifyContent = "flex-start";
 }
 
-async function getIpInfo(){
-    // Set endpoint and your access key IP='45.4.26.252'
-    const ip = document.getElementById("input_ip");
-    const ip_content = ip.value;
+async function getIpInfo (){
+    // Set endpoint and your access key
+    const ip = '45.4.26.252';
     const accessKey = '5b7eb238-810e-4b9d-b14c-8421ca4f52d8';
     const url = 'https://apiip.net/api/check?ip='+ ip_content +'&accessKey='+ accessKey; 
   
@@ -42,3 +41,4 @@ async function getIpInfo(){
     console.log(result);
     InputButtonConteudo();
   };
+  getIpInfo();
