@@ -14,14 +14,23 @@ function limitedInput(){
         //de 0 a 15.
         ip.value = ip_content.slice(0, 15);
     }
-    return ip.value;
+    console.log(ip_content)
 }
 
-async function getIpInfo (){
-    // Set endpoint and your access key
-    const ip = '45.4.26.252';
+function InputButtonConteudo(){
+    var color = document.getElementById("changeColor");
+    var position =  document.getElementById("changePosition");
+    color.style.backgroundColor = "#DCDCDC";
+    position.style.alignItems = "flex-start";
+    position.style.justifyContent = "flex-start";
+}
+
+async function getIpInfo(){
+    // Set endpoint and your access key IP='45.4.26.252'
+    const ip = document.getElementById("input_ip");
+    const ip_content = ip.value;
     const accessKey = '5b7eb238-810e-4b9d-b14c-8421ca4f52d8';
-    const url = 'https://apiip.net/api/check?ip='+ ip +'&accessKey='+ accessKey; 
+    const url = 'https://apiip.net/api/check?ip='+ ip_content +'&accessKey='+ accessKey; 
   
     // Make a request and store the response
     const response = await fetch(url);
@@ -31,5 +40,5 @@ async function getIpInfo (){
   
     // Output the "code" value inside "currency" object
     console.log(result);
+    InputButtonConteudo();
   };
-  getIpInfo();

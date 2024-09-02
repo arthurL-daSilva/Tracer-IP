@@ -55,6 +55,8 @@ body {
     height: 220px;
     border-radius: 20px;
     background-color: antiquewhite;
+    transition: .5s ease;
+    transition-property: background-color;
 }
 
 .text {
@@ -69,7 +71,6 @@ body {
 .inputs{
     display: inline-flex;
     flex-wrap: wrap;
-    
 }
 
 /* From Uiverse.io by liyaxu123 */

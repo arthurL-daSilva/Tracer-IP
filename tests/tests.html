@@ -1,20 +1,50 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formato de Input</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Transição Suave</title>
+    <style>
+        .container {
+            position: relative;
+            height: 200px;
+            width: 200px;
+            background-color: lightgray;
+            overflow: hidden;
+        }
+
+        .elemento {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: lightblue;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: all 0.5s ease;
+        }
+
+        .container.mudou .elemento {
+            top: 0;
+            left: 0;
+            transform: translate(0, 0);
+        }
+    </style>
 </head>
-
 <body>
-    <div class="container">
-        <label for="formatted-input">Digite o número:</label>
-        <input type="text" id="formatted-input" placeholder="Digite aqui" oninput="formatInput()">
+
+    <div class="container" id="container">
+        <div class="elemento"></div>
     </div>
-    <script src="script.js"></script>
+
+    <button onclick="mudarPosicao()">Mudar Posição</button>
+
+    <script>
+        function mudarPosicao() {
+            var container = document.getElementById("container");
+            container.classList.toggle("mudou");
+        }
+    </script>
+
 </body>
-
-
 </html>
