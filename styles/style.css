@@ -51,8 +51,7 @@ body {
 }
 
 .conteudo {
-    max-width: 40%;
-    min-width: 420px;
+    width: 420px;
     height: 220px;
     border-radius: 20px;
     background-color: antiquewhite;
@@ -61,7 +60,7 @@ body {
     transform: translateY(270px);
 }
 
-.text {
+.text, .API_text {
     margin-left: 20px;
 }
 
@@ -197,11 +196,26 @@ body {
 }
 
 .request{
+    color: white;
     opacity: 0;
-    min-width: 700px;
+    width: 700px;
     height: 500px;
     background-color: blue;
     border-radius: 20px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
     transform: translateY(15px);
+}
+
+.sub_titles {
+    width: 380px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.request_error{
+    opacity: 0;
+    color: red;
+    transition: .5s all;
 }

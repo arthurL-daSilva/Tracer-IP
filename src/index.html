@@ -15,12 +15,17 @@
         <hr class="line">
         <div class="container">
             <div class="request" id="API_request">
-
+                <div class="API_text">
+                    <P id="cidade">Cidade: </P>
+                </div>
             </div>
             <div class="conteudo" id="changeProperties">
                 <div class="text">
                     <h1>Bem-vindo ao Tracer-IP</h1>
-                    <p>Entre com seu ip abaixo:</p>
+                    <div class="sub_titles">
+                        <p>Entre com seu IPv4 abaixo:</p>
+                        <p class="request_error" id="ip_notfound">Erro! IP não encontrado.</p>
+                    </div>
                     <div class="inputs">
                         <div class="form-control">
                             <input type="value" id="input_ip" required="" oninput="limitedInput()">
