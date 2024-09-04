@@ -69,6 +69,20 @@ body {
     font-size: 30px;
 }
 
+.sub_titles {
+    width: 380px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.request_error{
+    opacity: 0;
+    color: red;
+    transition: .5s all;
+}
+
 .inputs{
     display: inline-flex;
     align-items: center; 
@@ -199,50 +213,54 @@ body {
 .request{
     color: white;
     opacity: 0;
-    width: 700px;
-    height: 500px;
+    width: 500px;
+    height: 350px;
     background-color: blue;
     border-radius: 20px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
     transform: translateY(15px);
 }
 
-.sub_titles {
-    width: 380px;
-    height: 40px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.request_error{
-    opacity: 0;
-    color: red;
-    transition: .5s all;
-}
-
 .container2{
     display: flex;
-    height: 80px;
+    height: 40px;
     width: 100%;
-    align-items: center;
+    align-items: start;
     justify-content: center;
 }
 
-.another{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: translateY(20px);
+/* From Uiverse.io by reshades */ 
+.another {
+    background-color: #000;
+    color: #fff;
+    width: 8.5em;
+    height: 2.9em;
+    border: #000 0.2em solid;
+    border-radius: 11px;
+    text-align: right;
+    transition: all 0.3s ease;
     opacity: 0;
-    width: 150px;
-    height: 50px;
-    cursor: pointer;
-    color: white;
-    outline: none;
-    border: none;
-    font-weight: 700;
-    background-color: red;
-    border-radius: 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    cursor: default;
+}
+  
+.another:hover {
+    background-color: #FF0000;
+    border: #FF0000 0.2em solid;
+}
+  
+.another svg {
+    width: 1.6em;
+    margin: -0.2em 0.8em 1em;
+    position: absolute;
+    display: flex;
+    transition: all 0.3s ease;
+}
+  
+.another:hover svg {
+    transform: translateX(5px);
+}
+  
+.another .text {
+    margin: 0 1.5em;
+    font-weight: 300;
 }

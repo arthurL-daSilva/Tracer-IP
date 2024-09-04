@@ -10,13 +10,22 @@
 </head>
 
 <body>
+
     <h1 class="tracer">TRACER-IP</h1>
     <div class="elements">
         <hr class="line">
         <div class="container">
             <div class="request" id="API_request">
                 <div class="API_text">
+                    <p id="continente">Continente: </p>
+                    <p id="pais">País: </p>
+                    <p id="nomeoficial"></p>
+                    <p id="capital">Capital: </p>
                     <P id="cidade">Cidade: </P>
+                    <p id="estado">Estado: </p>
+                    <p id="cep">CEP: </p>
+                    <p id="geox">Latitude: </p>
+                    <p id="geoy">Longitude: </p>
                 </div>
             </div>
             <div class="conteudo" id="changeProperties">
@@ -24,7 +33,7 @@
                     <h1>Bem-vindo ao Tracer-IP</h1>
                     <div class="sub_titles">
                         <p>Entre com seu IPv4 abaixo:</p>
-                        <p class="request_error" id="ip_notfound">Erro! IP não encontrado.</p>
+                        <p class="request_error" id="ip_notfound">Erro! IPv4 não encontrado.</p>
                     </div>
                     <div class="inputs">
                         <div class="form-control">
@@ -46,7 +55,15 @@
         </div>
         <hr class="line2">
         <div class="container2">
-            <button class="another" type="submit" id="cancel" onclick="inputButtonback()">VOLTAR</button>
+            <!-- From Uiverse.io by reshades --> 
+            <button class="another" type="submit" id="cancel" onclick="inputButtonback()">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
+                  </svg>
+                  <div class="text">
+                    voltar
+                  </div>
+            </button>
         </div>
     </div>
 </body>

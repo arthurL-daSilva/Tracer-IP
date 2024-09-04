@@ -24,9 +24,9 @@ function InputButtonConteudo(callback){
         request_box.style.transitionDelay = "1.3s";
         request_box.style.opacity = "1";
         request_box.style.transform = "translateY(0)";
+        back_box.style.cursor = "pointer";
         back_box.style.opacity = "1";
         back_box.style.transition = "ease 2s";
-        back_box.style.transform = "translateY(0)";
     }
     else{
         input_error.style.opacity = "1";
@@ -39,7 +39,7 @@ function inputButtonback(){
     var back_box = document.getElementById("cancel");
     document.getElementById("first_pick").disabled = false;
     
-    input_box.style.backgroundColor = "#antiquewhite";
+    input_box.style.backgroundColor = "#FAEBD7";
     input_box.style.transform = "translateY(270px)";
     input_box.style.transition = "ease 2s";
     request_box.style.transitionDuration = "2s";
@@ -48,7 +48,8 @@ function inputButtonback(){
     request_box.style.transform = "translateY(15px)";
     back_box.style.opacity = "0";
     back_box.style.transition = "ease 2s";
-    back_box.style.transform = "translateY(20px)";
+    back_box.style.cursor = "default"
+
 }
 
 async function getIpInfo(btn){
@@ -68,8 +69,25 @@ async function getIpInfo(btn){
         console.log(result);
         InputButtonConteudo(true);
         //ELEMENTOS DA API
-        let cidade = document.getElementById("cidade")
-        cidade.innerHTML += result.city; 
+        let cidade = document.getElementById("cidade");
+        let pais = document.getElementById("pais");
+        let capital = document.getElementById("capital");
+        let continente = document.getElementById("continente");
+        let nome_oficial = document.getElementById("nomeoficial");
+        let estado = document.getElementById("estado");
+        let cep = document.getElementById("cep");
+        let geox = document.getElementById("geox");
+        let geoy = document.getElementById("geoy");
+
+        cidade.innerHTML += result.city;
+        pais.innerHTML += result.countryNameNative + " " + result.countryFlagEmoj;
+        capital.innerHTML += result.capital;
+        continente.innerHTML += result.continentName + " " + result.continentCode;
+        nome_oficial.innerHTML += result.officialCountryName;
+        estado.innerHTML += result.regionName;
+        cep.innerHTML += result.postalCode;
+        geox.innerHTML += result.longitude;
+        geoy.innerHTML += result.latitude;
         //result: resultado da busca da API
         //.city: atributo buscado pela API   
     }
