@@ -60,7 +60,7 @@ body {
     transform: translateY(220px);
 }
 
-.text, .API_text {
+.text{
     margin-left: 20px;
 }
 
@@ -211,6 +211,7 @@ body {
 }
 
 .request{
+    display: flex;
     color: white;
     opacity: 0;
     width: 500px;
@@ -219,6 +220,11 @@ body {
     border-radius: 20px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
     transform: translateY(15px);
+}
+
+.pre_text{
+    margin-left: 20px;
+    width: 100px;
 }
 
 .container2{

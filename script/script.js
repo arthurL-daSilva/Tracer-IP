@@ -68,7 +68,8 @@ async function getIpInfo(){
         const result = await response.json();
         console.log(result);
         InputButtonConteudo(true);
-        //ELEMENTOS DA API
+        //IDENTAÇÃO DAS TAGS PARA OS ELEMENTOS DA API + OBJETOS DA API
+
         let cidade = document.getElementById("cidade");
         let pais = document.getElementById("pais");
         let capital = document.getElementById("capital");
@@ -79,14 +80,14 @@ async function getIpInfo(){
         let geox = document.getElementById("geox");
         let geoy = document.getElementById("geoy");
 
-        cidade.innerHTML += result.city;
-        pais.innerHTML += result.countryNameNative + " " + result.countryFlagEmoj;
-        capital.innerHTML += result.capital;
-        continente.innerHTML += result.continentName + " " + result.continentCode;
-        nome_oficial.innerHTML += result.officialCountryName;
-        estado.innerHTML += result.regionName;
-        cep.innerHTML += result.postalCode;
-        geox.innerHTML += result.longitude;
-        geoy.innerHTML += result.latitude; 
+        cidade.innerHTML = result.city;
+        pais.innerHTML = result.countryNameNative + " " + result.countryFlagEmoj;
+        capital.innerHTML = result.capital;
+        continente.innerHTML = result.continentName + " " + result.continentCode;
+        nome_oficial.innerHTML = result.officialCountryName;
+        estado.innerHTML = result.regionName;
+        cep.innerHTML = result.postalCode;
+        geox.innerHTML = result.longitude;
+        geoy.innerHTML = result.latitude; 
     }
 }
