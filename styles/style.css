@@ -57,7 +57,7 @@ body {
     background-color: antiquewhite;
     transition-property: background-color;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-    transform: translateY(270px);
+    transform: translateY(220px);
 }
 
 .text, .API_text {

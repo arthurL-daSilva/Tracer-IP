@@ -16,6 +16,7 @@ function InputButtonConteudo(callback){
     var request_box = document.getElementById("API_request");
     var back_box = document.getElementById("cancel");
     if(callback){
+        document.getElementById("first_pick").disabled = true;
         input_error.style.opacity = "0";
         input_box.style.backgroundColor = "#DCDCDC";
         input_box.style.transform = "translateY(0)";
@@ -37,10 +38,11 @@ function inputButtonback(){
     var input_box = document.getElementById("changeProperties");
     var request_box = document.getElementById("API_request");
     var back_box = document.getElementById("cancel");
+
     document.getElementById("first_pick").disabled = false;
-    
+
     input_box.style.backgroundColor = "#FAEBD7";
-    input_box.style.transform = "translateY(270px)";
+    input_box.style.transform = "translateY(220px)";
     input_box.style.transition = "ease 2s";
     request_box.style.transitionDuration = "2s";
     request_box.style.transitionDelay = "0s";
@@ -52,11 +54,10 @@ function inputButtonback(){
 
 }
 
-async function getIpInfo(btn){
-    btn.disabled = false;
+async function getIpInfo(){
     const ip = document.getElementById("input_ip");
     const ip_content = ip.value;
-    const accessKey = '5b7eb238-810e-4b9d-b14c-8421ca4f52d8';
+    const accessKey = '4eb9b3b5-2d37-46e9-a7fa-3e5ffa38ded9';
     const url = 'https://apiip.net/api/check?ip='+ ip_content +'&accessKey='+ accessKey; 
     const response = await fetch(url);
 
@@ -64,7 +65,6 @@ async function getIpInfo(btn){
         console.log("Error!");
         InputButtonConteudo(false);
     }else{
-        btn.disabled = true;
         const result = await response.json();
         console.log(result);
         InputButtonConteudo(true);
@@ -87,8 +87,6 @@ async function getIpInfo(btn){
         estado.innerHTML += result.regionName;
         cep.innerHTML += result.postalCode;
         geox.innerHTML += result.longitude;
-        geoy.innerHTML += result.latitude;
-        //result: resultado da busca da API
-        //.city: atributo buscado pela API   
+        geoy.innerHTML += result.latitude; 
     }
 }
